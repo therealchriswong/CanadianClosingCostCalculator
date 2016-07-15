@@ -15,6 +15,7 @@
 		4298E5B41D31DC4D00FBDD87 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4298E5B31D31DC4D00FBDD87 /* BaseCell.swift */; };
 		4298E5B61D32047F00FBDD87 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4298E5B51D32047F00FBDD87 /* Extensions.swift */; };
 		4298E5BB1D3302FC00FBDD87 /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4298E5BA1D3302FC00FBDD87 /* MenuBar.swift */; };
+		4298E5BD1D37113F00FBDD87 /* MenuBarDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4298E5BC1D37113F00FBDD87 /* MenuBarDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		4298E5B31D31DC4D00FBDD87 /* BaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
 		4298E5B51D32047F00FBDD87 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4298E5BA1D3302FC00FBDD87 /* MenuBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
+		4298E5BC1D37113F00FBDD87 /* MenuBarDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuBarDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				4298E5B11D31B84F00FBDD87 /* HomeController.swift */,
+				4298E5BC1D37113F00FBDD87 /* MenuBarDataSource.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4298E5A01D31AFD300FBDD87 /* AppDelegate.swift in Sources */,
+				4298E5BD1D37113F00FBDD87 /* MenuBarDataSource.swift in Sources */,
 				4298E5B41D31DC4D00FBDD87 /* BaseCell.swift in Sources */,
 				4298E5B21D31B84F00FBDD87 /* HomeController.swift in Sources */,
 				4298E5B61D32047F00FBDD87 /* Extensions.swift in Sources */,

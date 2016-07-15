@@ -76,15 +76,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mGg-Z5-mBB">
-                                <rect key="frame" x="0.0" y="64" width="600" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Jn8-eD-KjK" userLabel="Menu Bar Collection View">
+                                <rect key="frame" x="0.0" y="64" width="600" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="GXJ-nn-9HF"/>
+                                    <constraint firstAttribute="height" constant="150" id="2BL-u0-GlP"/>
                                 </constraints>
-                            </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mFk-6N-Td7">
-                                <rect key="frame" x="0.0" y="113" width="600" height="487"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kUk-IT-d0S">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="menuBarCellId" id="Ir6-DW-5gJ">
+                                        <rect key="frame" x="0.0" y="82" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.28281963510000002" green="0.34426870650000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mFk-6N-Td7" userLabel="Data Collection View">
+                                <rect key="frame" x="0.0" y="212" width="600" height="388"/>
                                 <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Lu9-dh-wYV">
                                     <size key="itemSize" width="600" height="200"/>
@@ -135,18 +152,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="mFk-6N-Td7" firstAttribute="top" secondItem="mGg-Z5-mBB" secondAttribute="bottom" constant="-1" id="U4t-UE-1TK"/>
+                            <constraint firstAttribute="trailing" secondItem="Jn8-eD-KjK" secondAttribute="trailing" id="MGr-ur-jHw"/>
                             <constraint firstItem="mFk-6N-Td7" firstAttribute="leading" secondItem="sgs-7i-WdV" secondAttribute="leading" id="VB4-g8-GPq"/>
                             <constraint firstItem="DR7-HL-A3C" firstAttribute="top" secondItem="mFk-6N-Td7" secondAttribute="bottom" id="X5p-XI-PF0"/>
+                            <constraint firstItem="Jn8-eD-KjK" firstAttribute="top" secondItem="pKb-81-JLw" secondAttribute="bottom" id="aCo-5o-cT6"/>
                             <constraint firstAttribute="trailing" secondItem="mFk-6N-Td7" secondAttribute="trailing" id="avW-jB-dmJ"/>
-                            <constraint firstItem="mGg-Z5-mBB" firstAttribute="leading" secondItem="sgs-7i-WdV" secondAttribute="leading" id="don-ef-khb"/>
-                            <constraint firstItem="mGg-Z5-mBB" firstAttribute="top" secondItem="pKb-81-JLw" secondAttribute="bottom" id="mGB-GP-0q0"/>
-                            <constraint firstAttribute="trailing" secondItem="mGg-Z5-mBB" secondAttribute="trailing" id="qDy-un-j5T"/>
+                            <constraint firstItem="mFk-6N-Td7" firstAttribute="top" secondItem="Jn8-eD-KjK" secondAttribute="bottom" constant="-2" id="ixo-Fz-gh8"/>
+                            <constraint firstItem="Jn8-eD-KjK" firstAttribute="leading" secondItem="sgs-7i-WdV" secondAttribute="leading" id="n9M-td-EKW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="w4S-SQ-YBc"/>
                     <connections>
-                        <outlet property="navigationView" destination="mGg-Z5-mBB" id="okG-H3-lzs"/>
+                        <outlet property="menuBarCollectionView" destination="Jn8-eD-KjK" id="Sqt-1s-Dij"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="baN-G5-TBh" userLabel="First Responder" sceneMemberID="firstResponder"/>

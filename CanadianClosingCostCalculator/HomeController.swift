@@ -8,9 +8,9 @@
 
 import UIKit
 
-class HomeController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class HomeController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
-    @IBOutlet var navigationView: UIView!
+    @IBOutlet var menuBarCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,16 +27,15 @@ class HomeController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 10
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cellId", forIndexPath: indexPath)
-                
+        
         return cell
     }
-    
     
     // MARK: UICollectionViewDelegateFlowLayout Delegate
     
@@ -53,7 +52,9 @@ class HomeController: UIViewController, UICollectionViewDataSource, UICollection
     // MARK: Helper Functions
     
     func setupMenuBar(){
-        navigationView.backgroundColor = UIColor.rgb(230, green: 32, blue: 31)
+        self.menuBarCollectionView.dataSource = MenuBarDataSource()
+
+        //menuBarCollectionView.backgroundColor = UIColor.rgb(230, green: 32, blue: 31)
     }
     
 }
