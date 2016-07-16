@@ -12,10 +12,14 @@ class HomeController: UIViewController, UICollectionViewDataSource, UICollection
 
     @IBOutlet var menuBarCollectionView: UICollectionView!
     
+    var dataSource: MenuBarDataSource?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationController?.navigationBar.translucent = false
+        
+        dataSource = MenuBarDataSource()
         
         setupMenuBar()
         
@@ -52,7 +56,7 @@ class HomeController: UIViewController, UICollectionViewDataSource, UICollection
     // MARK: Helper Functions
     
     func setupMenuBar(){
-        self.menuBarCollectionView.dataSource = MenuBarDataSource()
+        self.menuBarCollectionView.dataSource = dataSource
 
         //menuBarCollectionView.backgroundColor = UIColor.rgb(230, green: 32, blue: 31)
     }
