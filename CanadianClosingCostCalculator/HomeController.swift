@@ -14,12 +14,12 @@ class HomeController: UIViewController, UICollectionViewDataSource, UICollection
     
     var dataSource: MenuBarDataSource?
     
+    var moreMenu = MoreMenu()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationController?.navigationBar.translucent = false
-        
-        dataSource = MenuBarDataSource()
         
         setupMenuBar()
         
@@ -52,13 +52,26 @@ class HomeController: UIViewController, UICollectionViewDataSource, UICollection
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
         return 0
     }
-
+    
+    // MARK: IBAction
+    @IBAction func moreButtonItem(sender: UIBarButtonItem) {
+        
+        moreMenu.showMenu()
+        
+    }
     // MARK: Helper Functions
     
     func setupMenuBar(){
+        dataSource = MenuBarDataSource(menuBar: menuBarCollectionView)
+        
         self.menuBarCollectionView.dataSource = dataSource
+        self.menuBarCollectionView.delegate = dataSource
 
-        //menuBarCollectionView.backgroundColor = UIColor.rgb(230, green: 32, blue: 31)
+        menuBarCollectionView.backgroundColor = UIColor.rgb(230, green: 32, blue: 31)
+        
+        // Highlight the first icon
+        let selectedIndexPath = NSIndexPath(forItem: 0, inSection: 0)
+        menuBarCollectionView.selectItemAtIndexPath(selectedIndexPath, animated: false, scrollPosition: .None)
     }
     
 }

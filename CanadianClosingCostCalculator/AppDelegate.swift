@@ -27,6 +27,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Set the status bar to white. Set the Info.plist "View controller-based status bar appearance" property to NO
         application.statusBarStyle = .LightContent
         
+        // Remove black bar under the navbar
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().setBackgroundImage(UIImage(),forBarMetrics: .Default)
         
         // Apply grey view to status
         let statusBarBackgroundView = UIView()

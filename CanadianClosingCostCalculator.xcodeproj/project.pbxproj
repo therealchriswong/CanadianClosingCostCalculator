@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		429582571D3C179300D6FA0C /* MoreMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429582561D3C179300D6FA0C /* MoreMenu.swift */; };
 		4298E5A01D31AFD300FBDD87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4298E59F1D31AFD300FBDD87 /* AppDelegate.swift */; };
 		4298E5A51D31AFD300FBDD87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4298E5A31D31AFD300FBDD87 /* Main.storyboard */; };
 		4298E5A71D31AFD300FBDD87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4298E5A61D31AFD300FBDD87 /* Assets.xcassets */; };
@@ -16,9 +17,11 @@
 		4298E5B61D32047F00FBDD87 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4298E5B51D32047F00FBDD87 /* Extensions.swift */; };
 		4298E5BB1D3302FC00FBDD87 /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4298E5BA1D3302FC00FBDD87 /* MenuBar.swift */; };
 		4298E5BD1D37113F00FBDD87 /* MenuBarDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4298E5BC1D37113F00FBDD87 /* MenuBarDataSource.swift */; };
+		42E9C2221D3B09600001187C /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E9C2211D3B095F0001187C /* MenuCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		429582561D3C179300D6FA0C /* MoreMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreMenu.swift; sourceTree = "<group>"; };
 		4298E59C1D31AFD300FBDD87 /* CanadianClosingCostCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CanadianClosingCostCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4298E59F1D31AFD300FBDD87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4298E5A41D31AFD300FBDD87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -30,6 +33,7 @@
 		4298E5B51D32047F00FBDD87 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4298E5BA1D3302FC00FBDD87 /* MenuBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
 		4298E5BC1D37113F00FBDD87 /* MenuBarDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuBarDataSource.swift; sourceTree = "<group>"; };
+		42E9C2211D3B095F0001187C /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,7 @@
 			children = (
 				4298E5B11D31B84F00FBDD87 /* HomeController.swift */,
 				4298E5BC1D37113F00FBDD87 /* MenuBarDataSource.swift */,
+				429582561D3C179300D6FA0C /* MoreMenu.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -94,6 +99,7 @@
 		4298E5B91D32AF5200FBDD87 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				42E9C2211D3B095F0001187C /* MenuCell.swift */,
 				4298E5B31D31DC4D00FBDD87 /* BaseCell.swift */,
 				4298E5BA1D3302FC00FBDD87 /* MenuBar.swift */,
 			);
@@ -171,11 +177,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42E9C2221D3B09600001187C /* MenuCell.swift in Sources */,
 				4298E5A01D31AFD300FBDD87 /* AppDelegate.swift in Sources */,
 				4298E5BD1D37113F00FBDD87 /* MenuBarDataSource.swift in Sources */,
 				4298E5B41D31DC4D00FBDD87 /* BaseCell.swift in Sources */,
 				4298E5B21D31B84F00FBDD87 /* HomeController.swift in Sources */,
 				4298E5B61D32047F00FBDD87 /* Extensions.swift in Sources */,
+				429582571D3C179300D6FA0C /* MoreMenu.swift in Sources */,
 				4298E5BB1D3302FC00FBDD87 /* MenuBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,6 +334,7 @@
 				4298E5B01D31AFD300FBDD87 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
